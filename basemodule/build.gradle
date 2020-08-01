@@ -172,10 +172,10 @@ dependencies {
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
-def siteUrl = 'https://github.com/AlexFugui/VoicePlayer' //项目在github主页地址
-def gitUrl = 'https://github.com/AlexFugui/VoicePlayer.git'   //Git仓库的地址
+def siteUrl = 'https://github.com/hao751333636/BasicsLib' //项目在github主页地址
+def gitUrl = 'https://github.com/hao751333636/BasicsLib.git'   //Git仓库的地址
 // 唯一包名，比如implementation 'com.davis.ui.pulltorefresh:pulltorefresh:2.1.0'中的com.davis.ui.pulltorefresh就是这里配置的。
-group = "com.alex.voice-player"//包名,可以自定义,写aa.bb.cc都可以
+group = "com.shypr.baselib"//包名,可以自定义,写aa.bb.cc都可以
 //项目引用的版本号，比如implementation 'com.davis.ui.pulltorefresh:pulltorefresh:2.1.0'中的2.1.0就是这里配置的。
 version = "1.0.0"//发布aar的库版本
 
@@ -186,8 +186,8 @@ install {
             project {
                 packaging 'aar'
                 // 项目描述，复制我的话，这里需要修改。
-                name 'voice-player'// 可选，项目名称。
-                description 'Android voice-player'// 可选，项目描述。
+                name 'baselib'// 可选，项目名称。
+                description 'Android lib'// 可选，项目描述。
                 url siteUrl // 项目主页，这里是引用上面定义好。
 
                 // 软件开源协议，现在一般都是Apache License2.0吧，复制我的，这里不需要修改。
@@ -201,9 +201,9 @@ install {
                 //填写开发者基本信息，复制我的，这里需要修改。
                 developers {
                     developer {
-                        id 'AlexFugui' // 开发者的id,随便写
-                        name 'AlexFugui' // 开发者名字,,随便写
-                        email 'xxxxxxxx@xx.com' // 开发者邮箱。
+                        id 'shypr' // 开发者的id,随便写
+                        name 'shypr' // 开发者名字,,随便写
+                        email 'hao751333636@qq.com' // 开发者邮箱。
                     }
                 }
 
@@ -251,10 +251,10 @@ bintray {
 
     configurations = ['archives']
     pkg {
-        repo = "maven"  //Repository名字 需要自己在bintray网站上先添加
-        name = "voice-player"
+        repo = "baselib"  //Repository名字 需要自己在bintray网站上先添加
+        name = "baselib"
 // 发布到Bintray上的项目名字，这里的名字不是implementation 'com.davis.ui.pulltorefresh:pulltorefresh:2.1.0'中的pulltorefresh。
-        userOrg = 'alexfugui'//Bintray的组织中,你的id
+        userOrg = 'baselib'//Bintray的组织中,你的id
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
